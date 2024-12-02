@@ -47,6 +47,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransacti
           >
             <option value="expense">Expense</option>
             <option value="income">Income</option>
+            <option value="salary">Salary</option>
           </select>
         </div>
         

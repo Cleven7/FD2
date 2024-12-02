@@ -23,7 +23,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ transactions }) => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-500">Total Income</p>
-              <p className="text-2xl font-bold text-green-600">${totalIncome.toFixed(2)}</p>
+              <p className="text-2xl font-bold text-green-600">₹{totalIncome.toFixed(2)}</p>
             </div>
             <ArrowUpCircle className="w-8 h-8 text-green-500" />
           </div>
@@ -33,7 +33,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ transactions }) => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-500">Total Expenses</p>
-              <p className="text-2xl font-bold text-red-600">${totalExpenses.toFixed(2)}</p>
+              <p className="text-2xl font-bold text-red-600">₹{totalExpenses.toFixed(2)}</p>
             </div>
             <ArrowDownCircle className="w-8 h-8 text-red-500" />
           </div>
@@ -43,8 +43,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ transactions }) => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-500">Current Balance</p>
-              <p className={`text-2xl font-bold ${balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                ${balance.toFixed(2)}
+              <p className={`text-2xl font-bold ₹{balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              ₹{balance.toFixed(2)}
               </p>
             </div>
             <TrendingUp className="w-8 h-8 text-blue-500" />
@@ -83,13 +83,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ transactions }) => {
             <div key={category.category} className="flex items-center justify-between">
               <div>
                 <p className="font-medium">{category.category}</p>
-                <p className="text-sm text-gray-500">${category.amount.toFixed(2)}</p>
+                <p className="text-sm text-gray-500">₹{category.amount.toFixed(2)}</p>
               </div>
               <div className="w-24">
                 <div className="h-2 bg-gray-200 rounded-full">
                   <div
                     className="h-full bg-blue-600 rounded-full"
-                    style={{ width: `${category.percentage}%` }}
+                    style={{ width: `₹{category.percentage}%` }}
                   />
                 </div>
               </div>

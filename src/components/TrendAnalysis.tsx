@@ -25,7 +25,7 @@ export const TrendAnalysis: React.FC<TrendAnalysisProps> = ({ transactions }) =>
             <YAxis />
             <Tooltip 
               labelFormatter={(value) => format(new Date(value), 'MMMM yyyy')}
-              formatter={(value: number) => [`$${value.toFixed(2)}`, 'Amount']}
+              formatter={(value: number) => [`₹${value.toFixed(2)}`, 'Amount']}
             />
             <Line 
               type="monotone" 
